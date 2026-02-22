@@ -339,7 +339,7 @@ function startGame() {
     canvas.width = cw - 4; canvas.height = Math.min(500, Math.max(350, innerHeight * 0.55));
 
     const bW = 90, basket = { x: canvas.width / 2 - bW / 2, y: canvas.height - 50, width: bW, height: 36, tx: canvas.width / 2 - bW / 2 };
-    let hearts = [], spawnI = 1200, lastSpawn = -1, diffT = -1;
+    let hearts = [], spawnI = 900, lastSpawn = -1, diffT = -1;
 
     function handleMove(cx) {
         const r = canvas.getBoundingClientRect();
@@ -361,14 +361,14 @@ function startGame() {
             const isBomb = Math.random() < 0.15;
             hearts.push({
                 x: Math.random() * (canvas.width - 40) + 20, y: -30,
-                speed: 1.2 + Math.random() * 1.5 + (g1Score * 0.03),
+                speed: 2.5 + Math.random() * 2 + (g1Score * 0.05),
                 isBomb, type: isBomb ? 'bomb' : G1_TYPES[Math.floor(Math.random() * G1_TYPES.length)],
                 size: 28 + Math.random() * 8, rot: 0, rotS: (Math.random() - 0.5) * 0.06,
                 wobble: Math.random() * 6.28, wobbleS: 0.025 + Math.random() * 0.02
             });
             lastSpawn = t;
         }
-        if (t - diffT > 5000) { spawnI = Math.max(500, spawnI - 70); diffT = t; }
+        if (t - diffT > 4000) { spawnI = Math.max(350, spawnI - 80); diffT = t; }
         basket.x += (basket.tx - basket.x) * 0.18;
 
         // Basket
