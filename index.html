@@ -19,7 +19,7 @@
   <!-- Confetti Container -->
   <div id="confetti-container"></div>
 
-  <!-- Warp Overlay (for game 2 win transition) -->
+  <!-- Warp Overlay -->
   <div id="warp-overlay" class="warp-overlay"></div>
 
   <!-- Background Music -->
@@ -33,13 +33,11 @@
   <!-- Navigation Dots -->
   <nav class="nav-dots" id="navDots">
     <div class="nav-dot active" data-section="hero" data-label="Home" onclick="scrollToSection('hero')"></div>
-    <div class="nav-dot" data-section="compliments" data-label="For You" onclick="scrollToSection('compliments')"></div>
     <div class="nav-dot" data-section="apology" data-label="Sorry" onclick="scrollToSection('apology')"></div>
     <div class="nav-dot" data-section="game1" data-label="Game 1" onclick="scrollToSection('game1')"></div>
-    <div class="nav-dot" data-section="game2" data-label="Game 2" onclick="scrollToSection('game2')"></div>
   </nav>
 
-  <!-- ═══════════════ 1. HERO SECTION ═══════════════ -->
+  <!-- ═══════════════ 1. HERO ═══════════════ -->
   <section class="section" id="hero">
     <div class="hero-photo-wrapper">
       <div class="photo-frame">
@@ -59,58 +57,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════ 2. COMPLIMENTS / WISHES ═══════════════ -->
-  <section class="section" id="compliments">
-    <h2 class="section-title animate-on-scroll">
-      Things I <span class="highlight">Love</span> About You 🌟
-    </h2>
-
-    <div class="wishes-grid">
-      <div class="wish-card animate-on-scroll">
-        <span class="wish-emoji">😊</span>
-        <h3 class="wish-title">Your Smile</h3>
-        <p class="wish-text">That smile of yours could honestly light up the darkest room. It's my favorite thing in the
-          world. Don't ever stop smiling.</p>
-      </div>
-
-      <div class="wish-card animate-on-scroll">
-        <span class="wish-emoji">💪</span>
-        <h3 class="wish-title">Your Strength</h3>
-        <p class="wish-text">You handle everything life throws at you like a boss. Your determination inspires me every
-          single day. Keep winning! 🔥</p>
-      </div>
-
-      <div class="wish-card animate-on-scroll">
-        <span class="wish-emoji">🌸</span>
-        <h3 class="wish-title">तिम्रो हँसाइ</h3>
-        <p class="wish-text">तिम्रो हरेक हँसाइले मेरो दिन बनाउँछ। तिमी जस्तो राम्रो मान्छे संसारमा कम छ। Never change! ✨
-        </p>
-      </div>
-
-      <div class="wish-card animate-on-scroll">
-        <span class="wish-emoji">🎉</span>
-        <h3 class="wish-title">Your Vibe</h3>
-        <p class="wish-text">You bring good energy wherever you go. People literally vibe different when you're around.
-          That's a superpower 🔥</p>
-      </div>
-
-      <div class="wish-card animate-on-scroll">
-        <span class="wish-emoji">�</span>
-        <h3 class="wish-title">Birthday Queen</h3>
-        <p class="wish-text">It's YOUR day — eat all the cake, be extra, enjoy every second. Birthday calories don't
-          count, that's the rule 🎂😋</p>
-      </div>
-
-      <div class="wish-card animate-on-scroll">
-        <span class="wish-emoji">✈️</span>
-        <h3 class="wish-title">Future Adventures</h3>
-        <p class="wish-text">May this year take you to places you've dreamed of. New experiences, new memories. And
-          maybe drag me along too? 😅</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════ 3. APOLOGY SECTION ═══════════════ -->
+  <!-- ═══════════════ 2. APOLOGY ═══════════════ -->
   <section class="section" id="apology">
     <h2 class="section-title animate-on-scroll">
       A Small <span class="highlight">Sorry</span> 🥺
@@ -129,16 +76,17 @@
         <div class="love-note" data-message="I'll keep getting better 💪">I'll keep getting better 💪</div>
         <div class="love-note" data-message="Your support means everything 🤝">Your support means everything 🤝</div>
         <div class="love-note" data-message="मलाई माफ गर 🙏">मलाई माफ गर 🙏</div>
-        <div class="love-note" data-message="We're just getting started 🚀">We're just getting started �</div>
+        <div class="love-note" data-message="We're just getting started 🚀">We're just getting started 🚀</div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ 4. GAME 1 — Catch the Hearts ═══════════════ -->
+  <!-- ═══════════════ 3. GAME 1 — Catch the Hearts ═══════════════ -->
   <section class="section" id="game1">
     <h2 class="section-title animate-on-scroll">
       Catch the <span class="highlight">Hearts</span> 💕
     </h2>
+    <p class="game-teaser animate-on-scroll">Win this to unlock something sweet for you! 🎁</p>
 
     <div class="game-wrapper animate-on-scroll">
       <div class="game-info">
@@ -167,12 +115,63 @@
     </div>
   </section>
 
-  <!-- ═══════════════ 5. GAME 2 — Galaxy Runner ═══════════════ -->
+  <!-- ═══════════════ 4. COMPLIMENTS (Hidden — unlocked by Game 1) ═══════════════ -->
+  <section class="section" id="compliments" style="display:none;">
+    <h2 class="section-title animate-on-scroll">
+      Things I <span class="highlight">Love</span> About You 🌟
+    </h2>
+
+    <div class="wishes-grid">
+      <div class="wish-card animate-on-scroll">
+        <span class="wish-emoji">😊</span>
+        <h3 class="wish-title">Your Smile</h3>
+        <p class="wish-text">That smile of yours could honestly light up the darkest room. It's my favorite thing in the
+          world. Don't ever stop smiling.</p>
+      </div>
+
+      <div class="wish-card animate-on-scroll">
+        <span class="wish-emoji">💪</span>
+        <h3 class="wish-title">Your Strength</h3>
+        <p class="wish-text">You handle everything life throws at you like a boss. Your determination inspires me every
+          single day. Keep winning! �</p>
+      </div>
+
+      <div class="wish-card animate-on-scroll">
+        <span class="wish-emoji">🌸</span>
+        <h3 class="wish-title">तिम्रो हँसाइ</h3>
+        <p class="wish-text">तिम्रो हरेक हँसाइले मेरो दिन बनाउँछ। तिमी जस्तो राम्रो मान्छे संसारमा कम छ। Never change! ✨
+        </p>
+      </div>
+
+      <div class="wish-card animate-on-scroll">
+        <span class="wish-emoji">🎉</span>
+        <h3 class="wish-title">Your Vibe</h3>
+        <p class="wish-text">You bring good energy wherever you go. People literally vibe different when you're around.
+          That's a superpower 🔥</p>
+      </div>
+
+      <div class="wish-card animate-on-scroll">
+        <span class="wish-emoji">🍰</span>
+        <h3 class="wish-title">Birthday Queen</h3>
+        <p class="wish-text">It's YOUR day — eat all the cake, be extra, enjoy every second. Birthday calories don't
+          count, that's the rule 🎂😋</p>
+      </div>
+
+      <div class="wish-card animate-on-scroll">
+        <span class="wish-emoji">✈️</span>
+        <h3 class="wish-title">Future Adventures</h3>
+        <p class="wish-text">May this year take you to places you've dreamed of. New experiences, new memories. And
+          maybe drag me along too? 😅</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ 5. GAME 2 — Galaxy Runner (Hidden — unlocked after compliments) ═══════════════ -->
   <section class="section" id="game2" style="display:none;">
     <h2 class="section-title animate-on-scroll">
       <span class="highlight">Galaxy</span> Runner 🚀
     </h2>
-    <p class="game2-subtitle animate-on-scroll">A harder challenge awaits... Navigate through the cosmos!</p>
+    <p class="game-teaser game-teaser-big animate-on-scroll">🎁 A BIG surprise awaits if you beat this one! 🎁</p>
 
     <div class="game-wrapper animate-on-scroll">
       <div class="game-info">
@@ -197,11 +196,11 @@
       <canvas id="game2-canvas" width="600" height="450"></canvas>
 
       <button class="game-btn game-btn-galaxy" id="game2Btn" onclick="startGame2()">🚀 Launch!</button>
-      <p class="game-instruction">Dodge asteroids ☄️ and collect stars ⭐! This one's tough!</p>
+      <p class="game-instruction">Dodge asteroids ☄️ and collect stars ⭐! This one's TOUGH!</p>
     </div>
   </section>
 
-  <!-- ═══════════════ 6. UNIVERSE REVEAL ═══════════════ -->
+  <!-- ═══════════════ 6. UNIVERSE REVEAL (Hidden — unlocked by Game 2) ═══════════════ -->
   <section class="section" id="universe" style="display:none;">
     <canvas id="universe-canvas"></canvas>
 
@@ -226,18 +225,31 @@
 
     <div class="universe-content">
       <h2 class="universe-title">You Are My Universe</h2>
+
       <p class="universe-message">
         I cannot say you are the moon...<br>
-        but for me, <strong>you are my entire universe</strong>.<br><br>
-        <span class="universe-nepali">तिमी मेरो सम्पूर्ण संसार हौ �</span>
+        but for me, <strong>you are my entire universe</strong>.<br>
       </p>
+
+      <p class="universe-nepali-line">तिमी मेरो सम्पूर्ण संसार हौ 🌌</p>
 
       <div class="surprise-photo universe-photo">
         <img src="anshu.jpeg" alt="My Universe — Anshu">
       </div>
 
+      <div class="universe-lesson">
+        <p>
+          Just like the effort you made to win this game — if we give enough effort into our relationship, <strong>we
+            will win</strong>.
+        </p>
+        <p>
+          Learn to avoid the things that hurt in a relationship, rather than avoiding the soft-hearted boy who is
+          insecure but actually loves you the most. 💙
+        </p>
+      </div>
+
       <div class="universe-stars-row">
-        <span>�</span><span>✨</span><span>💫</span><span>⭐</span><span>�</span>
+        <span>🌟</span><span>✨</span><span>💫</span><span>⭐</span><span>🌟</span>
       </div>
     </div>
   </section>
